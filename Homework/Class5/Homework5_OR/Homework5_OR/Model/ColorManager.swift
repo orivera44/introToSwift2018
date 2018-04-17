@@ -23,7 +23,7 @@ class ColorManager {
     
     static func generateColors(typeColor: typeColor, numberOfColors: Int) -> [ColorViewModel] {
         var colors = [ColorViewModel]()
-        for _ in 0..<numberOfColors{
+        for _ in 0...numberOfColors{
             colors.append(self.colorValues(typeColor: typeColor))
         }
         return colors
