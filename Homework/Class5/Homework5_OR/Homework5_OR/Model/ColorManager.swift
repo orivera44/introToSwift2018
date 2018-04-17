@@ -45,7 +45,7 @@ class ColorManager {
             let redRandom = self.randomRGBValue
             let blueRandom = self.randomRGBValue
             let greenRandom = self.randomRGBValue
-            color = UIColor.init(red: self.randomRGBValue/CGFloat(ColorManager.maxRGBFloatValue), green: self.randomRGBValue/CGFloat(ColorManager.maxRGBFloatValue), blue: self.randomRGBValue/CGFloat(ColorManager.maxRGBFloatValue), alpha: 1)
+            color = UIColor.init(red: redRandom/CGFloat(ColorManager.maxRGBFloatValue), green: greenRandom/CGFloat(ColorManager.maxRGBFloatValue), blue: blueRandom/CGFloat(ColorManager.maxRGBFloatValue), alpha: 1)
             colorName = NSString(format:"R: %.0f, G: %.0f, B: %.0f, A: %d", redRandom, greenRandom, blueRandom,  1)
         case .GREEN:
             let greenRandom = self.randomRGBValue
