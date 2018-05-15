@@ -6,32 +6,20 @@
 //  Copyright © 2018 io.ricoLabs. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-struct address {
-    
-    
-    
-    
-    
+struct Address {
+
     var addressOne: String = ""
-    
-    
-    
-    
     var addressTwo: String = ""
     var cityTown: String = ""
-    var State: String = ""
+    var state: String = ""
+    var zipcode: String = ""
     
-    
-    
-    
-    
-    var ZipCode: String = ""
 }
 
 extension Address {
     var isFilledOut: Bool {
-        return && !cityTown.isEmpty && !state.isEmpty && !zipCode.isEmpty
+        return !cityTown.isEmpty && !state.isEmpty && !zipcode.isEmpty
     }
 }
