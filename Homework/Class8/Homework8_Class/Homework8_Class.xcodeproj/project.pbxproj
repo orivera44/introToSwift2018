@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9640E79CB3AB9F9C19500390 /* Pods_Homework8_Class.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C87E31A08C61E02A52903A /* Pods_Homework8_Class.framework */; };
 		C008AF282098E159004BC81F /* AddCreditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008AF272098E159004BC81F /* AddCreditCardViewController.swift */; };
 		C008AF2A209901DC004BC81F /* CreditCardSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008AF29209901DC004BC81F /* CreditCardSummaryCell.swift */; };
 		C075D9812098D9FC000A4ADA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C075D9802098D9FC000A4ADA /* AppDelegate.swift */; };
@@ -19,11 +18,12 @@
 		C075D9952098DB1A000A4ADA /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C075D9942098DB1A000A4ADA /* CreditCard.swift */; };
 		C075D9972098DC7F000A4ADA /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = C075D9962098DC7F000A4ADA /* Address.swift */; };
 		C075D9992098E073000A4ADA /* TextEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C075D9982098E073000A4ADA /* TextEntryCell.swift */; };
+		C92580AB8965BDFC2ED2D124 /* Pods_Homework8_Class.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 278AF8170B5346BEF4BF930B /* Pods_Homework8_Class.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2508F14C1568D68EBCC33494 /* Pods-Homework8_Class.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homework8_Class.release.xcconfig"; path = "Pods/Target Support Files/Pods-Homework8_Class/Pods-Homework8_Class.release.xcconfig"; sourceTree = "<group>"; };
-		48C87E31A08C61E02A52903A /* Pods_Homework8_Class.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Homework8_Class.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		278AF8170B5346BEF4BF930B /* Pods_Homework8_Class.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Homework8_Class.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C008AF272098E159004BC81F /* AddCreditCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCreditCardViewController.swift; sourceTree = "<group>"; };
 		C008AF29209901DC004BC81F /* CreditCardSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardSummaryCell.swift; sourceTree = "<group>"; };
 		C075D97D2098D9FC000A4ADA /* Homework8_Class.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homework8_Class.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +38,7 @@
 		C075D9962098DC7F000A4ADA /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		C075D9982098E073000A4ADA /* TextEntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEntryCell.swift; sourceTree = "<group>"; };
 		C4C8859D7D6D1D3301B758B0 /* Pods-Homework8_Class.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homework8_Class.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Homework8_Class/Pods-Homework8_Class.debug.xcconfig"; sourceTree = "<group>"; };
+		FBE0EF0320AD274F0089CD31 /* Homework8_Class-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Homework8_Class-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9640E79CB3AB9F9C19500390 /* Pods_Homework8_Class.framework in Frameworks */,
+				C92580AB8965BDFC2ED2D124 /* Pods_Homework8_Class.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,7 +56,7 @@
 		94BD659B712E29AF6EDEACC2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				48C87E31A08C61E02A52903A /* Pods_Homework8_Class.framework */,
+				278AF8170B5346BEF4BF930B /* Pods_Homework8_Class.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -81,6 +82,7 @@
 		C075D97F2098D9FC000A4ADA /* Homework8_Class */ = {
 			isa = PBXGroup;
 			children = (
+				FBE0EF0220AD246A0089CD31 /* licenses */,
 				C075D9922098DA10000A4ADA /* Instructions.swift */,
 				C075D9802098D9FC000A4ADA /* AppDelegate.swift */,
 				C075D9822098D9FD000A4ADA /* CreditCardsViewController.swift */,
@@ -93,6 +95,7 @@
 				C075D9872098D9FD000A4ADA /* Assets.xcassets */,
 				C075D9892098D9FD000A4ADA /* LaunchScreen.storyboard */,
 				C075D98C2098D9FD000A4ADA /* Info.plist */,
+				FBE0EF0320AD274F0089CD31 /* Homework8_Class-Bridging-Header.h */,
 			);
 			path = Homework8_Class;
 			sourceTree = "<group>";
@@ -104,6 +107,13 @@
 				2508F14C1568D68EBCC33494 /* Pods-Homework8_Class.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FBE0EF0220AD246A0089CD31 /* licenses */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = licenses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,7 +296,11 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_DISABLE_SAFETY_CHECKS = NO;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Homework8_Class-Bridging-Header";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = "";
 			};
 			name = Debug;
 		};
@@ -335,7 +349,11 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_DISABLE_SAFETY_CHECKS = NO;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Homework8_Class-Bridging-Header";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -405,6 +423,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.ricoLabs.Homework8-Class";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -449,6 +469,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.ricoLabs.Homework8-Class";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

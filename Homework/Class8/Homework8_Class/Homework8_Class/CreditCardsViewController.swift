@@ -10,6 +10,7 @@ import UIKit
 
 class CreditCardsViewController: UIViewController {
 
+
     var creditCards = [CreditCard]()
     
     @IBOutlet weak var tableView: UITableView!{
@@ -22,6 +23,8 @@ class CreditCardsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Credit Cards"
+//        CardIO
+//        CardIOUtilities.preload()
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewCreditCardButtonPressed))
         
         let defaults = UserDefaults.standard
@@ -33,19 +36,33 @@ class CreditCardsViewController: UIViewController {
         let newAddressVC = storyboard?.instantiateViewController(withIdentifier: "newCreditCard") as! AddCreditCardViewController
         newAddressVC.newCreditCard = CreditCard()
         newAddressVC.addDelegate = self
+        
         navigationController?.pushViewController(newAddressVC, animated: true)
     }
 }
 
+extension CreditCardsViewController {
+    func saveCards() {
+        
+        let creditCardsToSave = NSKeyedArchiver.archivedData(withRootObject: creditCards)
+        UserDefaults.standard.set(creditCardsToSave, forKey: "CreditCards")
+        
+//        var placesArray: [Place] = []
+//        placesArray.append(Place(latitude: 12, longitude: 21, name: "place 1"))
+//        placesArray.append(Place(latitude: 23, longitude: 32, name: "place 2"))
+//        placesArray.append(Place(latitude: 34, longitude: 43, name: "place 3"))
+        
+//        let placesData = NSKeyedArchiver.archivedData(withRootObject: placesArray)
+//        UserDefaults.standard.set(placesData, forKey: "places")
+    }
+}
 
 
 extension CreditCardsViewController: AddCreditCardDelegate {
     func didPressSaveButton(_ creditCard: CreditCard) {
         navigationController?.popViewController(animated: true)
         creditCards.append(creditCard)
-        
-        let defaults = UserDefaults.standard
-        defaults.set(creditCards, forKey: "CreditCards")
+        saveCards()
         
         tableView.reloadData()
     }
