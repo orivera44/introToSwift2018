@@ -11,6 +11,8 @@ import MapKit
 
 class DetailViewController: UIViewController {
     
+    let appData = AppData.shared
+    
     var buildingPermit: BuildingPermit!
     
     @IBOutlet weak var tableView: UITableView!

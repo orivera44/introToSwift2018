@@ -489,6 +489,82 @@
             </objects>
             <point key="canvasLocation" x="2514" y="471"/>
         </scene>
+        <!--Building Permit Add Controller-->
+        <scene sceneID="f0a-B0-Vfy">
+            <objects>
+                <viewController storyboardIdentifier="newBuildingPermit" id="u2G-L3-Nxz" customClass="BuildingPermitAddController" customModule="FinalProject_OR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZNm-wp-Lvx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wxs-Cx-qwQ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="L8M-Ba-Ylh">
+                                    <rect key="frame" x="0.0" y="98" width="375" height="1"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="textEntryCell" rowHeight="70" id="T4U-19-dfH" customClass="TextEntryCell" customModule="FinalProject_OR" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="T4U-19-dfH" id="Sas-8N-yBN">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XvH-LX-zqO">
+                                                    <rect key="frame" x="25" y="10" width="340" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NGe-qS-v8Y">
+                                                    <rect key="frame" x="25" y="36" width="340" height="30"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="NGe-qS-v8Y" firstAttribute="leading" secondItem="XvH-LX-zqO" secondAttribute="leading" id="3hg-P2-EYe"/>
+                                                <constraint firstAttribute="trailing" secondItem="XvH-LX-zqO" secondAttribute="trailing" constant="10" id="HIM-JR-sJZ"/>
+                                                <constraint firstItem="NGe-qS-v8Y" firstAttribute="top" secondItem="XvH-LX-zqO" secondAttribute="bottom" constant="5" id="Kp2-Tc-wdJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="NGe-qS-v8Y" secondAttribute="bottom" constant="3.5" id="Nq5-6f-OBg"/>
+                                                <constraint firstItem="NGe-qS-v8Y" firstAttribute="trailing" secondItem="XvH-LX-zqO" secondAttribute="trailing" id="RdK-qk-7GK"/>
+                                                <constraint firstItem="XvH-LX-zqO" firstAttribute="leading" secondItem="Sas-8N-yBN" secondAttribute="leading" constant="25" id="im5-XC-VXp"/>
+                                                <constraint firstItem="XvH-LX-zqO" firstAttribute="top" secondItem="Sas-8N-yBN" secondAttribute="top" constant="10" id="jm6-x5-0EL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="fieldName" destination="XvH-LX-zqO" id="mG1-Pf-RBX"/>
+                                            <outlet property="textField" destination="NGe-qS-v8Y" id="Y4h-Wa-17M"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="u2G-L3-Nxz" id="YZb-eG-LWL"/>
+                                    <outlet property="delegate" destination="u2G-L3-Nxz" id="1sv-ih-HPe"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4EJ-QS-dh1" firstAttribute="trailing" secondItem="wxs-Cx-qwQ" secondAttribute="trailing" id="7Cd-sz-WYo"/>
+                            <constraint firstItem="wxs-Cx-qwQ" firstAttribute="top" secondItem="4EJ-QS-dh1" secondAttribute="top" id="Fla-Uu-zF1"/>
+                            <constraint firstItem="wxs-Cx-qwQ" firstAttribute="leading" secondItem="4EJ-QS-dh1" secondAttribute="leading" id="IbW-8r-XQ4"/>
+                            <constraint firstItem="4EJ-QS-dh1" firstAttribute="bottom" secondItem="wxs-Cx-qwQ" secondAttribute="bottom" id="ebr-oT-BEl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4EJ-QS-dh1"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="wxs-Cx-qwQ" id="n5D-MH-6SR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cpq-v0-nae" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3260" y="462"/>
+        </scene>
         <!--Web View Controller-->
         <scene sceneID="Exe-VU-jPr">
             <objects>

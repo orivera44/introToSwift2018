@@ -9,30 +9,30 @@
 import UIKit
 
 struct BuildingPermit: Codable {
-    let yearOfEstablishment: String?
-    let statusBuildingPermit: StatusBuildingPermit?
-    let buildingPermitId: String?
-    let cadastre: String?
-    let estimatedCost: String?
-    let address: String?
-    let owner: String?
-    let awardDate: String?
-    let radicationDate: String?
-    let radicationYearMonth: String?
-    let town: String?
-    let projectName: String?
-    let investor: Investor?
-    let settledByPa: SettledByPa?
-    let district: District?
-    let sector: Sector?
-    let acronym: Acronym?
-    let status: Status?
-    let type: Type?
-    let location: Location?
-    let latitude: String?
-    let longitude: String?
-    let pointX: String?
-    let pointY: String?
+    var yearOfEstablishment: String?
+    var statusBuildingPermit: StatusBuildingPermit?
+    var buildingPermitId: String?
+    var cadastre: String?
+    var estimatedCost: String?
+    var address: String?
+    var owner: String?
+    var awardDate: String?
+    var radicationDate: String?
+    var radicationYearMonth: String?
+    var town: String?
+    var projectName: String?
+    var investor: Investor?
+    var settledByPa: SettledByPa?
+    var district: District?
+    var sector: Sector?
+    var acronym: Acronym?
+    var status: Status?
+    var type: Type?
+    var location: Location?
+    var latitude: String?
+    var longitude: String?
+    var pointX: String?
+    var pointY: String?
     var favorite: Bool = false
     
     enum CodingKeys: String, CodingKey {
@@ -92,4 +92,55 @@ extension BuildingPermit {
     var isFavorite: Bool {
         return favorite
     }
+}
+
+extension BuildingPermit {
+    
+    mutating func updateStatusDetail(_ type: StatusSectionGroup, _ value: String) -> BuildingPermit {
+        switch type {
+        case .buildingPermitStatus:
+            self.statusBuildingPermit = StatusBuildingPermit.init(rawValue: value)
+        }
+        return self
+    }
+    
+    mutating func updateInfoDetail(_ type: InfoSectionGroup, _ value: String) -> BuildingPermit {
+        switch type {
+        case .buildingPermitId:
+            self.buildingPermitId = value
+        case .catasdre:
+            self.cadastre = value
+        case .type:
+            self.type = Type.init(rawValue: value)
+        case .yearMonth:
+            self.radicationYearMonth = value
+        case .cost:
+            self.estimatedCost = value
+        }
+        return self
+    }
+    
+    mutating func updateOwnerDetail(_ type: OwnerSectionGroup, _ value: String) -> BuildingPermit {
+        switch type {
+        case .owner:
+            self.owner = value
+        case .investor:
+            self.investor = Investor.init(rawValue: value)
+        case .sector:
+            self.sector = Sector.init(rawValue: value)
+        }
+        return self
+    }
+    
+    mutating func updateLocationDetail(_ type: LocationSectionGroup, _ value: String) -> BuildingPermit {
+        switch type {
+        case .address:
+            self.address = value
+        case .city:
+            self.town = value
+        }
+        return self
+    }
+    
+    
 }

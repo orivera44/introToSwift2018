@@ -22,7 +22,7 @@ class BuildingPermitController: UIViewController {
         didSet{
             tableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
             let refreshControl = UIRefreshControl()
-            refreshControl.attributedTitle = NSAttributedString(string: "loading...")
+            refreshControl.attributedTitle = NSAttributedString(string: "cargando...")
             refreshControl.addTarget(self, action:  #selector(refresh), for: UIControlEvents.valueChanged)
             tableView.addSubview(refreshControl)
         }
@@ -37,27 +37,22 @@ class BuildingPermitController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         loadBuildingPermit(with: false)
         appData.retrieveBuildingPermitFavorites()
         configureNavigationController("Permisos")
-        
         
         let filterButton = UIBarButtonItem(image: #imageLiteral(resourceName: "filternav"), style: .plain, target: self, action: #selector(filterTapped(_:)))
         navigationItem.rightBarButtonItem = filterButton
         navigationItem.rightBarButtonItem?.tintColor = .white
         
-        
-        
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.layoutIfNeeded()
-        //        tableView.beginUpdates()
         tableView.reloadRows(at: tableView.indexPathsForVisibleRows!, with: UITableViewRowAnimation.none)
-        //        tableView.endUpdates()
     }
 
     private func loadBuildingPermit(with reloadData: Bool!) {

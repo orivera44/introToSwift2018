@@ -47,7 +47,6 @@ extension AppData {
     }
     
     func setFavoriteBuildingPermit(){
-
             for savedBuildingPermit in buildPermitFavoriteList {
                 if let row = self.buildPermits.index(where: {$0.buildingPermitId == savedBuildingPermit.buildingPermitId}) {
                     buildPermits[row].favorite = true
@@ -66,6 +65,10 @@ extension AppData {
         }
     }
     
+    func newBuildingPermit(with newBuildingPermitFavorite: BuildingPermit) {
+        buildPermitFavorites.append(newBuildingPermitFavorite)
+        saveBuildingPermitFavorites()
+    }
     
     func sortBuildingPermitFavorites(object toMove: BuildingPermit,  moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         buildPermitFavorites.remove(at: sourceIndexPath.row)

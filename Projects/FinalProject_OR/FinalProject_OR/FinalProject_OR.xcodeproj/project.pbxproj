@@ -23,6 +23,8 @@
 		FB94962720BB319100B38E40 /* BuildingPermitSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB94962620BB319100B38E40 /* BuildingPermitSummaryCell.swift */; };
 		FB94962920BB439A00B38E40 /* ColorExtenxions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB94962820BB439A00B38E40 /* ColorExtenxions.swift */; };
 		FB94962C20BB751000B38E40 /* APPStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB94962B20BB751000B38E40 /* APPStyle.swift */; };
+		FBA465D620E30CA40075D0CA /* BuildingPermitAddController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA465D520E30CA40075D0CA /* BuildingPermitAddController.swift */; };
+		FBA465D820E30EA20075D0CA /* TextEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA465D720E30EA20075D0CA /* TextEntryCell.swift */; };
 		FBE0EF3B20B24A940089CD31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0EF3A20B24A940089CD31 /* AppDelegate.swift */; };
 		FBE0EF3D20B24A940089CD31 /* BuildingPermitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0EF3C20B24A940089CD31 /* BuildingPermitController.swift */; };
 		FBE0EF3F20B24A940089CD31 /* FavoritesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0EF3E20B24A940089CD31 /* FavoritesController.swift */; };
@@ -51,6 +53,8 @@
 		FB94962620BB319100B38E40 /* BuildingPermitSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingPermitSummaryCell.swift; sourceTree = "<group>"; };
 		FB94962820BB439A00B38E40 /* ColorExtenxions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtenxions.swift; sourceTree = "<group>"; };
 		FB94962B20BB751000B38E40 /* APPStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APPStyle.swift; sourceTree = "<group>"; };
+		FBA465D520E30CA40075D0CA /* BuildingPermitAddController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingPermitAddController.swift; sourceTree = "<group>"; };
+		FBA465D720E30EA20075D0CA /* TextEntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEntryCell.swift; sourceTree = "<group>"; };
 		FBE0EF3720B24A940089CD31 /* FinalProject_OR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject_OR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBE0EF3A20B24A940089CD31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBE0EF3C20B24A940089CD31 /* BuildingPermitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingPermitController.swift; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 				FB19E43A20C4B68D00E94B3E /* TextDetailCell.swift */,
 				FB19E43C20C4D15C00E94B3E /* MapCell.swift */,
 				FB2E2A8020DA04BF00575087 /* EnumCells.swift */,
+				FBA465D720E30EA20075D0CA /* TextEntryCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -187,6 +192,7 @@
 				FBE0EF3E20B24A940089CD31 /* FavoritesController.swift */,
 				FB19E43820C4761800E94B3E /* DetailViewController.swift */,
 				FB2E2A7B20D8AE2200575087 /* WebViewController.swift */,
+				FBA465D520E30CA40075D0CA /* BuildingPermitAddController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -329,8 +335,10 @@
 				FB59A04020B266250021D368 /* EnumUtil.swift in Sources */,
 				FB94961D20B78F0600B38E40 /* QueryServices.swift in Sources */,
 				FB94962920BB439A00B38E40 /* ColorExtenxions.swift in Sources */,
+				FBA465D620E30CA40075D0CA /* BuildingPermitAddController.swift in Sources */,
 				FB2E2A7E20D9E4F700575087 /* UIViewControllerExtensions.swift in Sources */,
 				FBE0EF3F20B24A940089CD31 /* FavoritesController.swift in Sources */,
+				FBA465D820E30EA20075D0CA /* TextEntryCell.swift in Sources */,
 				FBE0EF3B20B24A940089CD31 /* AppDelegate.swift in Sources */,
 				FB94962120B795AE00B38E40 /* BuildingPermitResponse.swift in Sources */,
 				FB94962720BB319100B38E40 /* BuildingPermitSummaryCell.swift in Sources */,

@@ -22,12 +22,23 @@ class FavoritesController: UIViewController {
         super.viewDidLoad()
         configureNavigationController("Favoritos")
         self.navigationItem.rightBarButtonItem = self.editButtonItem
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "sort"), style: .plain, target: self, action: #selector(sortButtonPressed))
-        navigationItem.rightBarButtonItem?.tintColor = .white
+        let sortButton = UIBarButtonItem(image: #imageLiteral(resourceName: "sortlight"), style: .plain, target: self, action: #selector(sortButtonPressed))
+        sortButton.tintColor = .white
+        let addButton = UIBarButtonItem(image: #imageLiteral(resourceName: "icons8-heart-outline-50"), style: .plain, target: self, action: #selector(addNewBuildingPermitButtonPressed))
+        addButton.tintColor = .white
+        navigationItem.rightBarButtonItems = [addButton, sortButton]
     }
     
     @objc func sortButtonPressed(){
         tableView.setEditing(!tableView.isEditing, animated: true)
+    }
+    
+    @objc private func addNewBuildingPermitButtonPressed() {
+        let newBuildingPermitVC = storyboard?.instantiateViewController(withIdentifier: "newBuildingPermit") as! BuildingPermitAddController
+        newBuildingPermitVC.newBuildingPermit = BuildingPermit()
+        newBuildingPermitVC.addDelegate = self
+        configureBackBarButton()
+        navigationController?.pushViewController(newBuildingPermitVC, animated: true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -53,6 +64,14 @@ class FavoritesController: UIViewController {
         }
     }
 
+}
+
+extension FavoritesController: AddBuildingPermitDelegate {
+    func didPressSaveButton(_ buildingPermit: BuildingPermit) {
+        navigationController?.popViewController(animated: true)
+        appData.newBuildingPermit(with: buildingPermit)
+        tableView.reloadData()
+    }
 }
 
 extension FavoritesController: UITableViewDelegate{
